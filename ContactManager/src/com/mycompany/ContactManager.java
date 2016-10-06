@@ -26,10 +26,11 @@ public class ContactManager {
         // opens a new session from the session factory
         Session session = sessionFactory.openSession();
         session.beginTransaction();
+        
         // persists two new Contact objects
-        Contact contact1 = new Contact("Nam", "hainatuatgmail.com", "Vietnam", "0904277091");
+        Contact contact1 = new Contact("braden", "braden@gmail.com", "Vietnam", "0904277091");
         session.persist(contact1);
-        Contact contact2 = new Contact("Bill", "billatgmail.com", "USA", "18001900");
+        Contact contact2 = new Contact("bullock", "bullock@gmail.com", "USA", "18001900");
         Serializable id = session.save(contact2);
         System.out.println("created id: " + id);
          
