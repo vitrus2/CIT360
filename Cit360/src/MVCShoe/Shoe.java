@@ -2,15 +2,21 @@ package MVCShoe;
 
 import java.util.Scanner;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
 public class Shoe {
-	   private String brand;
-	   private String style;
-	   private String color;
-	   private String size;
+	@Id
+	private int shoeId;	
+	private String brand;
+	private String style;
+	private String color;
+	private String size;
 	  
 	 //getting input of shoe and setting it
-public Shoe() {
+public Shoe(int shoeId) {
+	this.shoeId = shoeId;
 	 Scanner scanner = new Scanner(System.in);
 	 System.out.print("Brand: ");
 	 String brand = scanner.nextLine();

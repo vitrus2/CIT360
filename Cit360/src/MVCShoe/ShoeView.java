@@ -1,15 +1,16 @@
 package MVCShoe;
 
 public class ShoeView {
-	   public void displayShoe(String brand, String style, String color, String size,int shoeNum){
-	      System.out.println("---------Shoe----> " + shoeNum);
+	   public void displayShoe(Shoe shoe){
+	      System.out.println("---------Shoe----> ");
 	      // nike, jimmy choo, burk, uggs
-	      System.out.println("Brand: " + brand);
+	      System.out.println("Brand: " + shoe.getBrand());
 	      // heels, boots, sneakers, sandals, athletic
-	      System.out.println("Style: " + style);
+	      System.out.println("Style: " + shoe.getStyle());
 	      // yellow, blue, white, black
-	      System.out.println("Color: " + color);
+	      System.out.println("Color: " + shoe.getColor());
 	      // 8, 9, 9.5, 10, 11.5
-	      System.out.println("Size: " + size);
+	      System.out.println("Size: " + shoe.getSize());
+	      System.out.println("---------------------------------------------------");
 	   }
 	}
